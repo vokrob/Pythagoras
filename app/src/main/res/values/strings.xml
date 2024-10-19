@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pythagoras</string>
+    <string name="title">Вычислить \"C\"</string>
+    <string name="result_info">Результат:&#160;</string>
+    <string name="result">Результат</string>
+    <string name="input_a">Введите значение \"a\"</string>
+    <string name="input_b">Введите значение \"b\"</string>
+    <string name="error">Поле должно быть заполнено</string>
+</resources>
