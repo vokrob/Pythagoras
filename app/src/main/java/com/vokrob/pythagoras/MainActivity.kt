@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             a = edA.text.toString().toDouble()
             b = edB.text.toString().toDouble()
         }
-        return sqrt((a.pow(2) + b.pow(2))).toString()
+        return String.format("%.3f", sqrt((a.pow(2) + b.pow(2))))
     }
 }
 

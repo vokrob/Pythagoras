@@ -98,6 +98,7 @@
         android:backgroundTint="@color/grey"
         android:onClick="onClickResult"
         android:text="@string/result"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayoutB"
         app:layout_constraintStart_toStartOf="@+id/textInputLayoutB"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutB" />
