@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -37,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             if (edA.text.isNullOrEmpty()) edA.error = getString(R.string.error)
             if (edB.text.isNullOrEmpty()) edB.error = getString(R.string.error)
-
             return edA.text.isNullOrEmpty() || edB.text.isNullOrEmpty()
         }
     }
@@ -45,19 +43,18 @@ class MainActivity : AppCompatActivity() {
     private fun getResult(): String {
         val a: Double
         val b: Double
-
         binding.apply {
             a = edA.text.toString().toDouble()
             b = edB.text.toString().toDouble()
         }
-        return String.format("%.3f", sqrt((a.pow(2) + b.pow(2))))
+        val result = sqrt(a.pow(2) + b.pow(2))
+        return if (result % 1 == 0.0) {
+            result.toInt().toString()
+        } else {
+            String.format("%.3f", result)
+        }
     }
 }
-
-
-
-
-
 
 
 
